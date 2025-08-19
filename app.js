@@ -24,6 +24,19 @@ function exibirAmigos() {
     }
 }
 
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("A lista de amigos está vazia. Adicione amigos antes de sortear."); 
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length); // Gera um índice aleatório
+    const amigoSorteado = amigos[indiceAleatorio]; 
+
+    const resultado = document.getElementById('resultado'); 
+    resultado.innerHTML = `<li>${amigoSorteado}</li>`; // Exibe o amigo sorteado
+}
+
 
 
 
